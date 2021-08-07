@@ -21,6 +21,12 @@
             <th>
                 @Html.DisplayNameFor(model => model.Tipo)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PreEvolucao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Evolucao)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -35,6 +41,26 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @foreach (var evolucao in Model)
+                {
+                    if (item.PreEvolucao == evolucao.ID)
+                    {
+                        @Html.DisplayFor(modelItem => evolucao.Nome)
+                        break;
+                    }
+                }
+            </td>
+            <td>
+                @foreach (var evolucao in Model)
+                {
+                    if (item.Evolucao == evolucao.ID)
+                    {
+                        @Html.DisplayFor(modelItem => evolucao.Nome)
+                        break;
+                    }
+                }
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |

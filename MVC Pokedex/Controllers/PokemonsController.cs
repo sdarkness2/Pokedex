@@ -22,7 +22,7 @@ namespace MVC_Pokedex.Controllers
 
         // GET: Pokemons
         public async Task<IActionResult> Index()
-        { 
+        {
             return View(await _context.Pokemons.ToListAsync());
         }
 
