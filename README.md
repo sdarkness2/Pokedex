@@ -1,4 +1,4 @@
-Uma database em de pokemons feita em MVC, SQL Server e Entity Framework Core
+Uma database em Asp.net de pokemons feita em MVC, SQL Server e Entity Framework Core
 
 <h2>--Detalhes--</h2>
 <p>O banco de dados foi feito antes do projeto e a query do mesmo está na pasta.</p>
